@@ -4,6 +4,8 @@ import com.LibrarySystem.LibrarySystemApplication.Entity.Book;
 import com.LibrarySystem.LibrarySystemApplication.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+
 
 import java.util.List;
 import java.util.Optional;
@@ -17,12 +19,15 @@ public class BookController {
     @GetMapping
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
+
     }
 
     @GetMapping("/{id}")
     public Optional<Book> getBookById(@PathVariable Long id) {
         return bookService.getBookById(id);
     }
+
+
 
     @PostMapping
     public Book saveBook(@RequestBody Book book) {

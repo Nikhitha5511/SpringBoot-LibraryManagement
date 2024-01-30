@@ -1,5 +1,4 @@
 package com.LibrarySystem.LibrarySystemApplication.Entity;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -13,6 +12,10 @@ public class Book {
     private Long id;
     public String title;
     public String author;
+
+    public Book(){
+
+    }
     public Book(String title, String author){
         this.title=title;
         this.author=author;
